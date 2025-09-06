@@ -1,13 +1,9 @@
-import { Link } from '@tanstack/react-router'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
@@ -24,37 +20,6 @@ export function ProfileDropdown() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-56' align='end' forceMount>
-        <DropdownMenuLabel className='font-normal'>
-          <div className='flex flex-col space-y-1'>
-            <p className='text-sm leading-none font-medium'>satnaing</p>
-            <p className='text-muted-foreground text-xs leading-none'>
-              satnaingdev@gmail.com
-            </p>
-          </div>
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem asChild>
-            <Link to='/settings'>
-              حساب کاربری
-              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link to='/settings'>
-              صورتحساب
-              <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link to='/settings'>
-              تنظیمات
-              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>تیم جدید</DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
         <DropdownMenuItem>
           خروج
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>

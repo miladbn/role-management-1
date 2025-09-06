@@ -1,12 +1,5 @@
 import { Link } from '@tanstack/react-router'
-import {
-  BadgeCheck,
-  Bell,
-  ChevronsUpDown,
-  CreditCard,
-  LogOut,
-  Sparkles,
-} from 'lucide-react'
+import { ChevronsUpDown, CreditCard, LogOut, Sparkles } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
   DropdownMenu,
@@ -82,24 +75,14 @@ export function NavUser({
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem asChild>
-                <Link to='/settings/account'>
-                  <BadgeCheck />
-                  حساب کاربری
-                </Link>
-              </DropdownMenuItem>
+              <DropdownMenuItem asChild></DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to='/settings'>
                   <CreditCard />
                   پرداخت
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to='/settings/notifications'>
-                  <Bell />
-                  هشدارها
-                </Link>
-              </DropdownMenuItem>
+              <DropdownMenuItem asChild></DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
