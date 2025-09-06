@@ -1,7 +1,5 @@
 import {
-  IconChecklist,
   IconLayoutDashboard,
-  IconPackages,
   IconPalette,
   IconSettings,
 } from '@tabler/icons-react'
