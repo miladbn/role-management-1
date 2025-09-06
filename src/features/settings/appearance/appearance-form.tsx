@@ -1,13 +1,11 @@
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
-import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { fonts } from '@/config/fonts'
-import { cn } from '@/lib/utils'
 import { showSubmittedData } from '@/utils/show-submitted-data'
 import { useFont } from '@/context/font-context'
 import { useTheme } from '@/context/theme-context'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -56,38 +54,6 @@ export function AppearanceForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
-        <FormField
-          control={form.control}
-          name='font'
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>فونت</FormLabel>
-              <div className='relative w-max'>
-                <FormControl>
-                  <select
-                    className={cn(
-                      buttonVariants({ variant: 'outline' }),
-                      'w-[200px] appearance-none font-normal capitalize',
-                      'dark:bg-background dark:hover:bg-background'
-                    )}
-                    {...field}
-                  >
-                    {fonts.map((font) => (
-                      <option key={font} value={font}>
-                        {font}
-                      </option>
-                    ))}
-                  </select>
-                </FormControl>
-                <ChevronDownIcon className='absolute top-2.5 left-3 h-4 w-4 opacity-50' />
-              </div>
-              <FormDescription className='font-manrope'>
-                فونت مورد نظر خود را برای استفاده در داشبورد تنظیم کنید.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
         <FormField
           control={form.control}
           name='theme'
