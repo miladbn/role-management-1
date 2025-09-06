@@ -1,21 +1,9 @@
 import {
-  IconBarrierBlock,
-  IconBrowserCheck,
-  IconBug,
   IconChecklist,
-  IconError404,
-  IconHelp,
   IconLayoutDashboard,
-  IconLock,
-  IconLockAccess,
-  IconNotification,
   IconPackages,
   IconPalette,
-  IconServerOff,
   IconSettings,
-  IconTool,
-  IconUserCog,
-  IconUserOff,
   IconUsers,
 } from '@tabler/icons-react'
 import { AudioWaveform, Command, GalleryVerticalEnd } from 'lucide-react'
@@ -71,68 +59,7 @@ export const sidebarData: SidebarData = {
         },
       ],
     },
-    {
-      title: 'صفحات',
-      items: [
-        {
-          title: 'احراز هویت',
-          icon: IconLockAccess,
-          items: [
-            {
-              title: 'ورود',
-              url: '/sign-in',
-            },
-            {
-              title: 'ورود (2 ستون)',
-              url: '/sign-in-2',
-            },
-            {
-              title: 'ثبت نام',
-              url: '/sign-up',
-            },
-            {
-              title: 'فراموشی رمز عبور',
-              url: '/forgot-password',
-            },
-            {
-              title: 'کد یکبار مصرف',
-              url: '/otp',
-            },
-          ],
-        },
-        {
-          title: 'خطاها',
-          icon: IconBug,
-          items: [
-            {
-              title: 'غیرمجاز',
-              url: '/401',
-              icon: IconLock,
-            },
-            {
-              title: 'ممنوع',
-              url: '/403',
-              icon: IconUserOff,
-            },
-            {
-              title: 'یافت نشد',
-              url: '/404',
-              icon: IconError404,
-            },
-            {
-              title: 'خطای سرور داخلی',
-              url: '/500',
-              icon: IconServerOff,
-            },
-            {
-              title: 'خطای نگهداری',
-              url: '/503',
-              icon: IconBarrierBlock,
-            },
-          ],
-        },
-      ],
-    },
+
     {
       title: 'دیگر',
       items: [
@@ -141,36 +68,11 @@ export const sidebarData: SidebarData = {
           icon: IconSettings,
           items: [
             {
-              title: 'پروفایل',
-              url: '/settings',
-              icon: IconUserCog,
-            },
-            {
-              title: 'حساب کاربری',
-              url: '/settings/account',
-              icon: IconTool,
-            },
-            {
               title: 'ظاهر',
               url: '/settings/appearance',
               icon: IconPalette,
             },
-            {
-              title: 'اعلانات',
-              url: '/settings/notifications',
-              icon: IconNotification,
-            },
-            {
-              title: 'نمایش',
-              url: '/settings/display',
-              icon: IconBrowserCheck,
-            },
           ],
-        },
-        {
-          title: 'مرکز راهنما',
-          url: '/help-center',
-          icon: IconHelp,
         },
       ],
     },
