@@ -8,7 +8,6 @@ import {
   IconLayoutDashboard,
   IconLock,
   IconLockAccess,
-  IconMessages,
   IconNotification,
   IconPackages,
   IconPalette,
@@ -20,7 +19,6 @@ import {
   IconUsers,
 } from '@tabler/icons-react'
 import { AudioWaveform, Command, GalleryVerticalEnd } from 'lucide-react'
-import { ClerkLogo } from '@/assets/clerk-logo'
 import { type SidebarData } from '../types'
 
 export const sidebarData: SidebarData = {
@@ -65,34 +63,11 @@ export const sidebarData: SidebarData = {
           url: '/apps',
           icon: IconPackages,
         },
-        {
-          title: 'چت ها',
-          url: '/chats',
-          badge: '3',
-          icon: IconMessages,
-        },
+
         {
           title: 'کاربران',
           url: '/users',
           icon: IconUsers,
-        },
-        {
-          title: 'محافظت شده توسط Clerk',
-          icon: ClerkLogo,
-          items: [
-            {
-              title: 'ورود',
-              url: '/clerk/sign-in',
-            },
-            {
-              title: 'ثبت نام',
-              url: '/clerk/sign-up',
-            },
-            {
-              title: 'مدیریت کاربران',
-              url: '/clerk/user-management',
-            },
-          ],
         },
       ],
     },
