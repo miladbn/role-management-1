@@ -1,9 +1,7 @@
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { fonts } from '@/config/fonts'
 import { showSubmittedData } from '@/utils/show-submitted-data'
-import { useFont } from '@/context/font-context'
 import { useTheme } from '@/context/theme-context'
 import { Button } from '@/components/ui/button'
 import {
@@ -21,22 +19,16 @@ const appearanceFormSchema = z.object({
   theme: z.enum(['light', 'dark'], {
     required_error: 'لطفاً یک تم را انتخاب کنید.',
   }),
-  font: z.enum(fonts, {
-    invalid_type_error: 'یک فونت را انتخاب کنید',
-    required_error: 'لطفاً یک فونت را انتخاب کنید.',
-  }),
 })
 
 type AppearanceFormValues = z.infer<typeof appearanceFormSchema>
 
 export function AppearanceForm() {
-  const { font, setFont } = useFont()
   const { theme, setTheme } = useTheme()
 
   // This can come from your database or API.
   const defaultValues: Partial<AppearanceFormValues> = {
     theme: theme as 'light' | 'dark',
-    font,
   }
 
   const form = useForm<AppearanceFormValues>({
@@ -45,7 +37,6 @@ export function AppearanceForm() {
   })
 
   function onSubmit(data: AppearanceFormValues) {
-    if (data.font != font) setFont(data.font)
     if (data.theme != theme) setTheme(data.theme)
 
     showSubmittedData(data)
